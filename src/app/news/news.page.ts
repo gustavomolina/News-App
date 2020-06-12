@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../news.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-news',
@@ -9,7 +10,7 @@ import { NewsService } from '../news.service';
 export class NewsPage implements OnInit {
 
   //Serviço da página de notícias
-  constructor(private newsService: NewsService) { }
+  constructor(private newsService: NewsService, private router: Router) { }
 
   //Variavel para manipular os dados retornados pela API.
   data: any;
@@ -22,5 +23,8 @@ export class NewsPage implements OnInit {
       this.data = data;
     })
   }
-
+  onGoToNewsSinglePage(article){
+        this.newsService.currentArticle = article;
+        this.router.navigate(['/news-single'])
+  }
 }

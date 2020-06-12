@@ -6,13 +6,12 @@
 
 <ion-content>
     <!-- Marcação '?' para pegar as propriedades-->
-    <ion-card *ngFor="let article of data?.articles">
+    <ion-card *ngFor="let article of data?.articles" (click)="onGoToNewsSinglePage(article)">
         <ion-card-header>
-            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
             <ion-card-title>{{article.title}}</ion-card-title>
             <ion-img [src]="article.urlToImage"></ion-img>
         </ion-card-header>
-            <p>{{article.description}}</p>
+
         <ion-card-content>
 
         </ion-card-content>
