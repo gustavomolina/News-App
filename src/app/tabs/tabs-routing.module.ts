@@ -10,7 +10,7 @@ const routes: Routes = [
       {
         //Página de notícias
         path: 'news',
-        loadChildren: () => import('../news/news.page').then(m => m.NewsPage)
+        loadChildren: () => import('../news/news.module').then(m => m.NewsPageModule)
       },
       {
         path: 'tab2',
@@ -29,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/news',
     pathMatch: 'full'
   }
 ];
