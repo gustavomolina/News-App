@@ -7,7 +7,9 @@ import { TabsPageRoutingModule } from './tabs-routing.module';
 
 import { TabsPage } from './tabs.page';
 
-import { NewsPageModule } from '../news/news.module'
+import { NewsPageModule } from '../news/news.module';
+
+import {NewsSinglePageModule} from '../news-single/news-single.module';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { NewsPageModule } from '../news/news.module'
     CommonModule,
     FormsModule,
     TabsPageRoutingModule,
-    NewsPageModule
+    NewsPageModule,
+    NewsSinglePageModule
+
 
   ],
   declarations: [TabsPage]

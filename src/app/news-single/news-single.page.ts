@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../news.service';
 
+
 @Component({
   selector: 'app-news-single',
   templateUrl: './news-single.page.html',

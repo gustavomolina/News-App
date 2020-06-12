@@ -17,7 +17,7 @@ export class NewsPage implements OnInit {
 
   ngOnInit() {
     //Aqui pode-se editar como será a consulta à API
-    this.newsService.getdata('everything?q=bitcoin&from=2020-05-11&sortBy=publishedAt')
+    this.newsService.getdata('everything?q=bitcoin&sortBy=publishedAt&language=pt')
     .subscribe(data => {
       console.log(data);
       this.data = data;
